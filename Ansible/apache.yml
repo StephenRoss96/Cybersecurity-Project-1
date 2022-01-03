@@ -1,0 +1,9 @@
+---
+- name: Config Web VM with Docker
+  hosts: webservers
+  become: true
+  tasks:
+    - name: apache2
+      apt:
+        name: apache2
+        state: absent
